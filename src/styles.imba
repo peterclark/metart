@@ -1,24 +1,62 @@
 # including some global styles here
 global css html
-	w:100% h:100% m:0 ff:sans
+	body
+		h:100vh
+		d:flex
+		jc:center
+		ff:sans
+		c:gray8
+		m:0
 
-	body w:100% h:100% m:0
+	.App
+		d:flex
+		jc:center
+		fld:column
+		h:100vh
+		w:100vw
+	
+	h1
+		ta:center
 
-	button -webkit-appearance: none
-		bg:blue5 @hover:blue6
-		fs:sm c:white
-		d:flex ja:center
-		px:4 py:2 rd:sm bd:0px
-		mx:2 fl:0 0 auto
+	.Departments
+		d:flex
+		flw:wrap
+		jc:center
 
-	header
-		flex: 0 0 auto
-		display: hflex
-		justify-content: flex-start
-		align-items: stretch
-		padding: 10px 6px
-		background: #e8e8e8
+	button
+		bd:1px solid gray3
+		bg:white @hover:gray2
+		rd:md
+		py:.5em
+		px:1em
+		bxs:none @hover:sm
+		cursor:pointer
+		fs:16px
 
-	input d:block px:4 bg:transparent
-		bd:none fs:inherit w:50px
-		fl:1 1 auto
+	.Controls
+		pos:absolute
+		r:1em
+		t:1em
+
+		.PreviousArt, .NextArt, .Close
+			c:white
+			ts:1px 1px 1px black
+			cursor:pointer
+			mr:.5em
+
+	.Art
+		d:flex
+
+	.Art img
+		w:100vw
+		h:100vh
+		object-fit: cover
+		m: 0 auto
+
+	.Metadata
+		pos:absolute
+		b:0
+		w:100vw
+		p:2em
+		bg:rgba(0,0,0,.75)
+		c:rgba(255,255,255.75)
